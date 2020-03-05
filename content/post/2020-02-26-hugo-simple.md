@@ -116,7 +116,7 @@ Mac下直接使用`Homebrew`安装：
      git commit -m "first commit"
      git push -u origin master
     ```
-    浏览器里访问：`https://coderzh.github.io/`（注意：可能由于网络原因部署好之后显示的和预览效果不同，等待一段时间就好了。）
+    浏览器里访问：`https://coderzh.github.io/`
     其它更详细的介绍，你看浏览[Hugo官网](https://gohugo.net/)
 
 ## 三：Hugo+Netlify
@@ -125,10 +125,25 @@ Mac下直接使用`Homebrew`安装：
 1. 将Hugo生成好的站点`push`到远程仓库上去，使用`.gitignore`文件将生成的静态页面文件`public`忽略掉。假设使用的远程仓库是Github，那么就将远程仓库授权给Netlify。
 ![](https://pic.downk.cc/item/5e567d2f6127cc0713dc236f.png)
 ![](https://pic.downk.cc/item/5e567def6127cc0713dc4887.png)
-2. 部署好之后，点击预览，这个时候使用的是Netlify提供的免费的域名，如果想要使用自己的域名，可以进行更改（注意：国内的域名使用DNS解析是需要进行备案的。）
+2. 添加参数进行部署，hugo版本可以使用`hugo version`查看
+![](https://pic.downk.cc/item/5e60cc7998271cb2b8a37e94.png)
+3. 部署好之后，点击预览，这个时候使用的是Netlify提供的免费的域名，如果想要使用自己的域名，可以进行添加（注意：国内的域名是需要进行备案的。）
 ![](https://pic.downk.cc/item/5e568a526127cc0713de177b.png)
 ![](https://pic.downk.cc/item/5e568b1e6127cc0713de3321.png)
-3. 添加自己的域名
-![](https://pic.downk.cc/item/5e568b1e6127cc0713de3321.png)
-4. 这样就完成部署了，下次再提交更改到远程仓库的时候，Netlify会自动进行部署。
+4. 添加自己的域名并上传证书
+![](https://pic.downk.cc/item/5e60ce7f98271cb2b8a51357.png)
+![](https://pic.downk.cc/item/5e60d03d98271cb2b8a624c7.png)
+添加完域名之后，点击`Check DNS configuration`,按照要求进行解析
+![](https://pic.downk.cc/item/5e60d0f998271cb2b8a6c3f3.png)
+![](https://pic.downk.cc/item/5e60d17198271cb2b8a7478b.png)
+域名解析好之后，可以上传自己的证书（这里不建议使用netlify提供的证书）
+![](https://pic.downk.cc/item/5e60d1fd98271cb2b8a7ab00.png)
+![](https://pic.downk.cc/item/5e60d3d598271cb2b8a915fb.png)
+去域名服务商下载证书（需要自己申请）
+![](https://pic.downk.cc/item/5e60d2a498271cb2b8a8213f.png)
+解压下载好的压缩包，里面的Apache和Nginx里面有需要的PEM文件和私钥（用文本编辑器打开复制内容），
+CA链会通过邮件发送给你
+![](https://pic.downk.cc/item/5e60d34f98271cb2b8a89787.png)
+注意，使用HTTPS之后需要等待一段时间才能访问网站，大概10分钟。
+5. 这样就完成部署了，下次再提交更改到远程仓库的时候，Netlify会自动进行部署。
 ![](https://pic.downk.cc/item/5e568d9e6127cc0713de7ec2.png)
