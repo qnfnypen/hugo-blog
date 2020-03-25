@@ -66,8 +66,8 @@ summaryLength = 140
 ## 配置 utteranc评论,教程参考 https://utteranc.es/
 [params.utteranc]
   enable = true
-  repo = "https://github.com/qnfnypen/qnfnypen.github.io" ##换成自己得
-  issueTerm = "pathname"
+  repo = "qnfnypen/hugo-blog" ##换成自己得
+  issueTerm = "title"
   theme = "github-light"
 
 ## 开启版权声明，协议名字和链接都可以换
