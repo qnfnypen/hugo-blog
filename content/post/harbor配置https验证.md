@@ -2,12 +2,14 @@
 title="Harbor配置https验证"
 date=2020-04-15T11:02:38+08:00
 categories=["Harbor"]
+tags=["Harbor"]
 toc=false
 +++
 
 ### 一：安装Harbor
 #### 1. 安装的先决条件
 **硬件**：
+
 |资源|最低要求|推荐的|
 |:--:|:--:|:--:|
 |CPU|2|4|
@@ -15,6 +17,7 @@ toc=false
 |磁盘|40GB|160GB|
 
 **软件**：
+
 |软件|版本|描述|
 |:--:|:--:|:--:|
 |Docker Engine|Version 17.06.0-ce+ or higher|[官方文档](https://docs.docker.com/engine/installation/)|
@@ -22,6 +25,7 @@ toc=false
 |Openssl|最好是最新的|用于生成Harbor的自签证书和自签私钥|
 
 **网络端口**：
+
 |端口|协议|描述|
 |:--:|:--:|:--:|
 |80|HTTP|接受HTTP请求|

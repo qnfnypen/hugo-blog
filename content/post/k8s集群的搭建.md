@@ -2,6 +2,7 @@
 title="Kubernetes (K8s) 集群搭建"
 date=2020-04-15T11:07:38+08:00
 categories=["Harbor","Kubernetes"]
+tags=["Harbor","Kubernetes"]
 toc=false
 +++
 
@@ -10,6 +11,7 @@ toc=false
 **节点是充当Kubernetes集群中的辅助计算机的VM或物理计算机**。每个条件都有一个Kubelet，它是用于管理节点并与Kubernetes主节点通信的代理。该节点还应该具有用于处理容器操作的工具，例如Docker或rkt。处理生产流量的Kubernetes集群**至少应该具有三个节点**。
 
 **硬件**：
+
 |资源|最低要求|
 |:--:|:--:|
 |CPU|2|
